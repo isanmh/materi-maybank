@@ -31,11 +31,6 @@ mysql_upgrade
 - Buka doc midtrans 
 - Masuk ke features/transactions/index.js (fungsi createTransaction)
 # import const :
-
-# untuk midtrans, midtrains server (key btoa = base64 encode)
-const authString = btoa(`${MIDTRANS_SERVER_KEY}:`);
-
-- tambahkan key di utils/constans.js :
 # Tambahkan Import diatas :
 import {
   MIDTRANS_SERVER_KEY,
@@ -43,6 +38,10 @@ import {
   MIDTRANS_APP_URL,
 } from "../../utils/constant.js";
 
+# untuk midtrans, midtrains server (key btoa = base64 encode)
+const authString = btoa(`${MIDTRANS_SERVER_KEY}:`);
+
+- tambahkan key di utils/constans.js :
 # midtrans server key
 export const MIDTRANS_SERVER_KEY = process.env.MIDTRANS_SERVER_KEY;
 
@@ -195,6 +194,8 @@ export const trxNotif = async (req, res) => {
 - setting routes/index.js :
 # webhook
 router.post("/transactions/notification", catchAsync(trxNotif));
+
+# import trxNotif
 
 - setting notification (midtrains cloud) untuk webhook website hrs dideploy terlebih dahulu :
 # sandbox > integration > notification settings > add notification > url :
