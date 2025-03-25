@@ -9,17 +9,6 @@ Cara menggunakan midtrans payment gateway :
 2. daftar akun midtrans
 3. ganti environment ke sandbox
 
-REST API dari Backend :
-// isi dari api products
-const url = "http://localhost:3001/products";
-init() {
-    fetch("url")
-    .then((res) => res.json())
-    .then((data) => {
-        this.items = data.data;
-    });
-},
-
 =====================
 4. Cara Integrasi Snap Midtrans :
 https://docs.midtrans.com/docs/snap-snap-integration-guide
