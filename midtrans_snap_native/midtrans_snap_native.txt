@@ -4,6 +4,17 @@ git clone https://github.com/isanmh/kopi-app.git
 Final Project Midtrans Snap Native :
 https://github.com/isanmh/transkopi
 
+Fix Error Laragon curl :
+1. buka file php.ini 
+C:\laragon\bin\php\php-8.3.16-Win32-vs16-x64\php.ini
+klik kanan laragon > PHP > php.ini
+
+2. copy paste code berikut php/midtrans-php-master/cacert.pem >>>>
+C:\laragon\bin\php\php-8.3.16-Win32-vs16-x64\extras\ssl\cacert.pem
+
+3. cari curl.cainfo
+curl.cainfo = "C:\laragon\bin\php\php-8.3.16-Win32-vs16-x64\extras\ssl\cacert.pem"
+
 Cara menggunakan midtrans payment gateway :
 1. Buka website midtrans : https://www.midtrans.com/
 2. daftar akun midtrans
